@@ -1,16 +1,16 @@
 ### Hi there 👋
 
-<!--
-**DiscreteTom/DiscreteTom** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This is DiscreteTom, a cloud native architect 🍌.
 
-Here are some ideas to get you started:
+[![Github Status](https://github-readme-stats.vercel.app/api?username=DiscreteTom&show_icons=true&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DiscreteTom&hide=c,c%2B%2B&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Projects
+
+[![Omnitrix](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=Omnitrix)](https://github.com/DiscreteTom/Omnitrix)
+[![Infrontier](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=Infrontier)](https://github.com/DiscreteTom/Infrontier)
+[![discretetom.github.io](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=discretetom.github.io)](https://github.com/DiscreteTom/discretetom.github.io)
+[![dt-blog-boilerplate](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=dt-blog-boilerplate)](https://github.com/DiscreteTom/dt-blog-boilerplate)
+[![clonesure](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=clonesure)](https://github.com/DiscreteTom/clonesure)
+[![cmdHere](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=cmdHere)](https://github.com/DiscreteTom/cmdHere)
+[![TaskbarKiller-v3](https://github-readme-stats.vercel.app/api/pin/?username=DiscreteTom&repo=TaskbarKiller-v3)](https://github.com/DiscreteTom/TaskbarKiller-v3)
