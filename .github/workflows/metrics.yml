@@ -18,6 +18,7 @@ jobs:
           # Options
           user: DiscreteTom
           template: classic
+          filename: metrics.svg
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
           plugin_achievements: yes
@@ -49,7 +50,6 @@ jobs:
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
-      - run: mv github-metrics.svg metrics.svg
       - uses: lowlighter/metrics@latest
         with:
           # Your GitHub token
@@ -65,9 +65,9 @@ jobs:
           # Options
           user: DiscreteTom
           template: classic
+          filename: repos.svg
           base: ""
           config_timezone: Asia/Shanghai
           plugin_repositories: yes
           plugin_repositories_featured: bimark,retsac,ws-server,tcping,WebCaster,stickdeck,HyperStudio
           plugin_repositories_order: featured, pinned, starred, random
-      - run: mv github-metrics.svg repo.svg
