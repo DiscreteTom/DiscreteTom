@@ -69,5 +69,5 @@ jobs:
           base: ""
           config_timezone: Asia/Shanghai
           plugin_repositories: yes
-          plugin_repositories_featured: bimark,retsac,UniStart,ws-server,tcping,WebCaster,stickdeck,HyperStudio
+          plugin_repositories_featured: bimark,retsac,UniStart,ws-server,tcping,WebCaster,stickdeck,shremdup
           plugin_repositories_order: featured, pinned, starred, random
