@@ -1,11 +1,14 @@
 name: Metrics
 on:
   # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
+  schedule: 
+   - cron: "0 0 * * *"
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+  push:
+    branches: 
+      - "master"
+      - "main"
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -15,7 +18,6 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          # Options
           user: DiscreteTom
           template: classic
           filename: metrics.svg
@@ -50,24 +52,3 @@ jobs:
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
-      # - uses: lowlighter/metrics@latest
-      #   with:
-      #     # Your GitHub token
-      #     # The following scopes are required:
-      #     #  - public_access (default scope)
-      #     # The following additional scopes may be required:
-      #     #  - read:org      (for organization related metrics)
-      #     #  - read:user     (for user related data)
-      #     #  - read:packages (for some packages related data)
-      #     #  - repo          (optional, if you want to include private repositories)
-      #     token: ${{ secrets.METRICS_TOKEN }}
-
-      #     # Options
-      #     user: DiscreteTom
-      #     template: classic
-      #     filename: repos.svg
-      #     base: ""
-      #     config_timezone: Asia/Shanghai
-      #     plugin_repositories: yes
-      #     plugin_repositories_featured: bimark,retsac,UniStart,ws-server,tcping,WebCaster,stickdeck,shremdup
-      #     plugin_repositories_order: featured, pinned, starred, random
