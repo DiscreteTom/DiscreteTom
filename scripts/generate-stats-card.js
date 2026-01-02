@@ -19,7 +19,11 @@ async function generateStatsCard() {
 
     // Fetch stats and render card
     const stats = await fetchStats(username);
-    const card = renderStatsCard(stats);
+    const card = renderStatsCard(stats, {
+      show_icons: true,
+      theme: 'transparent',
+      hide_border: true
+    });
 
     // Write SVG file
     const outputPath = path.join(outputDir, `${username}-stats.svg`);
