@@ -1,0 +1,55 @@
+name: Generate GitHub Stats Card
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'GitHub username'
+        required: false
+        default: 'DiscreteTom'
+
+jobs:
+  generate-card:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - uses: actions/checkout@v4
+      with:
+        repository: anuraghazra/github-readme-stats
+        path: github-readme-stats
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        cache-dependency-path: github-readme-stats/package-lock.json
+
+    - name: Install dependencies
+      working-directory: github-readme-stats
+      run: npm ci
+
+    - name: Generate stats card
+      env:
+        PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_USERNAME: ${{ github.event.inputs.username || github.repository_owner }}
+      run: |
+        chmod +x scripts/generate-stats-card.js
+        mkdir -p github-readme-stats/scripts
+        mv scripts/generate-stats-card.js github-readme-stats/scripts
+        cd github-readme-stats && node scripts/generate-stats-card.js
+
+    - name: Commit generated stats
+      env:
+        GITHUB_USERNAME: ${{ github.event.inputs.username || github.repository_owner }}
+      run: |
+        cp github-readme-stats/output/*.svg ${GITHUB_USERNAME}-stats.svg
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ${GITHUB_USERNAME}-stats.svg
+        git commit -m "feat: update ${GITHUB_USERNAME} stats card" || exit 0
+        git push
