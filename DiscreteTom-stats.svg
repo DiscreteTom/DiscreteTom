@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">DiscreteTom's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 410, Total Commits  (last year) : 1443, Total PRs: 267, Total Issues: 263, Contributed to (last year): 27</desc>
+        <desc id="descId">Total Stars Earned: 410, Total Commits  (last year) : 1429, Total PRs: 267, Total Issues: 263, Contributed to (last year): 27</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 16.045111075629933;
+        stroke-dashoffset: 16.842243554048274;
       }
     }
   
