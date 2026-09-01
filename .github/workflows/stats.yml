@@ -13,17 +13,19 @@ on:
 jobs:
   generate-card:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         repository: anuraghazra/github-readme-stats
         path: github-readme-stats
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: '22'
         cache: 'npm'
@@ -35,7 +37,7 @@ jobs:
 
     - name: Generate stats card
       env:
-        PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        PAT_1: ${{ secrets.PAT_1 }}
         GITHUB_USERNAME: ${{ github.event.inputs.username || github.repository_owner }}
       run: |
         chmod +x scripts/generate-stats-card.js
